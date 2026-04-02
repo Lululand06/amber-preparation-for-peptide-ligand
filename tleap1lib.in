@@ -1,0 +1,20 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+CIR = loadmol2 CIR_tmp.mol2 
+check CIR 
+loadamberparams CIR.frcmod
+saveoff CIR cir.lib 
+saveamberparm CIR cir.prmtop cir.inpcrd
+
+ALN = loadmol2 ALN_tmp.mol2 
+check ALN 
+loadamberparams ALN.frcmod
+saveoff ALN aln.lib 
+saveamberparm ALN aln.prmtop aln.inpcrd
+
+DPR = loadmol2 DPR_tmp.mol2 
+check DPR 
+loadamberparams DPR.frcmod
+saveoff DPR dpr.lib 
+saveamberparm DPR cdpr.prmtop dpr.inpcrd
+quit
